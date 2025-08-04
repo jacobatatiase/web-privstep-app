@@ -307,6 +307,76 @@ section {
     border-radius: 12px;
 }
 
+/* Risk Education Section */
+.risk-education {
+    background-color: #111111;
+    text-align: center;
+}
+
+.risk-education h2 {
+    color: #ffffff;
+    margin-bottom: 3rem;
+}
+
+.risk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.risk-item {
+    background-color: #1a1a1a;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.risk-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 0, 0, 0.2);
+    border-color: #ff3333;
+}
+
+.risk-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.risk-item h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.risk-item p {
+    color: #a1a1aa;
+    line-height: 1.6;
+}
+
+.privacy-education {
+    background-color: #1a1a1a;
+    padding: 3rem;
+    border-radius: 12px;
+    border: 2px solid #ff8c00;
+    box-shadow: 0 8px 24px rgba(255, 165, 0, 0.2);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.privacy-education h3 {
+    color: #ff8c00;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+}
+
+.privacy-education p {
+    color: #d1d5db;
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
 /* Target Audience Section */
 .target-audience {
     background-color: #0a0a0a;
@@ -422,9 +492,53 @@ section {
     transform: scale(1.05);
 }
 
-.coming-soon {
+.requirements {
     font-style: italic;
     color: #6b7280;
+}
+
+/* TestFlight Button Styles */
+.testflight-btn {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.testflight-btn:hover {
+    transform: scale(1.05);
+}
+
+.testflight-badge {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #007AFF;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+}
+
+.testflight-icon {
+    font-size: 2.5rem;
+}
+
+.testflight-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.testflight-available {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+}
+
+.testflight-name {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 600;
 }
 
 /* Footer */
