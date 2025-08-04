@@ -1423,6 +1423,63 @@ html {
     font-weight: 600;
 }
 
+/* Beta Reviews Section */
+.beta-reviews {
+    background-color: #0f0f0f;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.beta-reviews h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.review-item {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.review-item:hover {
+    transform: translateY(-2px);
+    border-color: #555;
+}
+
+.review-item p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #e5e5e5;
+    font-style: italic;
+}
+
+.reviewer {
+    color: #888;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .review-item {
+        padding: 1.5rem;
+    }
+}
+
 /* Footer */
 .footer {
     background-color: #000000;
