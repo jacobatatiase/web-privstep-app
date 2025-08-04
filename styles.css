@@ -167,6 +167,18 @@ html {
     line-height: 1.6;
 }
 
+.privacy-link {
+    color: #ff8c00;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.privacy-link:hover {
+    color: #ff7c00;
+    text-decoration: underline;
+}
+
 /* Features Section */
 .features {
     background-color: #0a0a0a;
