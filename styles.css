@@ -689,6 +689,122 @@ html {
     color: #ffffff;
 }
 
+/* Competitor Comparison Section */
+.competitor-comparison {
+    background-color: #0a0a0a;
+    text-align: center;
+}
+
+.competitor-comparison h2 {
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-size: 2.25rem;
+}
+
+.comparison-intro {
+    font-size: 1.125rem;
+    color: #a1a1aa;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    line-height: 1.6;
+}
+
+.competitors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+    text-align: left;
+}
+
+.competitor-item {
+    background-color: #1a1a1a;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.competitor-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 165, 0, 0.1);
+    border-color: #3a3a3a;
+}
+
+.competitor-item h3 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.competitor-item h3 a {
+    color: #ff8c00;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.competitor-item h3 a:hover {
+    text-decoration: underline;
+}
+
+.competitor-pros {
+    margin-bottom: 2rem;
+}
+
+.competitor-pros h4 {
+    color: #4ade80;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.competitor-considerations h4 {
+    color: #fbbf24;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.competitor-item ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.competitor-item li {
+    color: #d1d5db;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.comparison-conclusion {
+    background-color: #1a1a1a;
+    padding: 3rem;
+    border-radius: 12px;
+    border: 2px solid #ff8c00;
+    box-shadow: 0 8px 24px rgba(255, 165, 0, 0.2);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.comparison-conclusion h3 {
+    color: #ff8c00;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.comparison-conclusion p {
+    color: #d1d5db;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.comparison-conclusion p:last-child {
+    margin-bottom: 0;
+}
+
+.comparison-conclusion strong {
+    color: #ffffff;
+}
+
 /* Target Audience Section */
 .target-audience {
     background-color: #0a0a0a;
