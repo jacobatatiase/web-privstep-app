@@ -487,6 +487,208 @@ html {
     color: #ffffff;
 }
 
+/* Phone Security Section */
+.phone-security {
+    background-color: #111111;
+    text-align: center;
+}
+
+.phone-security h2 {
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-size: 2.25rem;
+}
+
+.phone-security-intro {
+    font-size: 1.125rem;
+    color: #a1a1aa;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    line-height: 1.6;
+}
+
+.security-comparison {
+    margin-bottom: 4rem;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.comparison-item {
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.local-advantage {
+    background-color: #1a1a1a;
+    border: 2px solid #ff8c00;
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.1);
+}
+
+.local-advantage:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 165, 0, 0.2);
+}
+
+.local-advantage h3 {
+    color: #ff8c00;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.cloud-risk {
+    background-color: #1a1a1a;
+    border: 2px solid #ff3333;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.1);
+}
+
+.cloud-risk:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 0, 0, 0.2);
+}
+
+.cloud-risk h3 {
+    color: #ff3333;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.comparison-item ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.comparison-item li {
+    color: #d1d5db;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.comparison-item strong {
+    color: #ffffff;
+}
+
+.security-reality {
+    background-color: #1a1a1a;
+    padding: 3rem;
+    border-radius: 12px;
+    margin-bottom: 4rem;
+}
+
+.security-reality h3 {
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.reality-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ff8c00;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: #d1d5db;
+    font-size: 1rem;
+    max-width: 150px;
+}
+
+.stat-vs {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #6b7280;
+}
+
+.iphone-advantages {
+    margin-bottom: 4rem;
+}
+
+.iphone-advantages h3 {
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: left;
+}
+
+.advantage-item {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.advantage-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 165, 0, 0.1);
+    border-color: #ff8c00;
+}
+
+.advantage-item h4 {
+    color: #ff8c00;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+}
+
+.advantage-item p {
+    color: #a1a1aa;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.phone-security-footer {
+    background-color: #1a1a1a;
+    padding: 3rem;
+    border-radius: 12px;
+    border: 2px solid #ff8c00;
+    box-shadow: 0 8px 24px rgba(255, 165, 0, 0.2);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.phone-security-footer p {
+    color: #d1d5db;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.phone-security-footer p:last-child {
+    margin-bottom: 0;
+    color: #ff8c00;
+    font-weight: 600;
+}
+
+.phone-security-footer strong {
+    color: #ffffff;
+}
+
 /* Target Audience Section */
 .target-audience {
     background-color: #0a0a0a;
