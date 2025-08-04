@@ -600,6 +600,139 @@ html {
     font-style: italic;
 }
 
+/* Terms Page Styles */
+.terms-header {
+    background-color: #1a1a1a;
+    padding: 1rem 0;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #ff8c00;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #ff7c00;
+}
+
+.back-arrow {
+    font-size: 1.25rem;
+}
+
+.header-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+}
+
+.terms-main {
+    background-color: #0a0a0a;
+    padding: 4rem 0;
+    min-height: 70vh;
+}
+
+.terms-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.terms-content h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.last-updated {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.terms-intro {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #ff8c00;
+    margin-bottom: 3rem;
+}
+
+.terms-intro p {
+    color: #d1d5db;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.terms-section {
+    background-color: #1a1a1a;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    margin-bottom: 2rem;
+}
+
+.terms-section h2 {
+    color: #ff8c00;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.terms-section p {
+    color: #d1d5db;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.terms-section ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.terms-section li {
+    color: #a1a1aa;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.terms-section strong {
+    color: #ffffff;
+}
+
+.terms-footer {
+    background-color: #1a1a1a;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 2px solid #ff8c00;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.terms-footer p {
+    color: #d1d5db;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.terms-footer p:last-child {
+    margin-bottom: 0;
+    color: #ff8c00;
+    font-weight: 600;
+}
+
 /* Footer */
 .footer {
     background-color: #000000;
