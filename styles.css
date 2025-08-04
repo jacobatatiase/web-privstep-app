@@ -57,6 +57,11 @@ section {
     margin-right: 1rem;
 }
 
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
 .btn-primary {
     background-color: #ff8c00;
     color: #000000;
