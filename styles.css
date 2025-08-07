@@ -233,9 +233,9 @@ html {
 
 .screenshots-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
     gap: 3rem;
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -256,18 +256,11 @@ html {
 
 .framed-screenshot {
     width: 100%;
-    max-width: 480px;
+    max-width: 100%;
     height: auto;
     margin-bottom: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-}
-
-/* Ensure desktop gets larger screenshots */
-@media (min-width: 768px) {
-    .framed-screenshot {
-        max-width: 480px;
-    }
 }
 
 .screenshot-item h3 {
@@ -281,6 +274,139 @@ html {
     color: #a1a1aa;
     font-size: 0.95rem;
     line-height: 1.5;
+    margin: 0;
+}
+
+.view-more-section {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.view-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, #ff8c00 0%, #ff7c00 100%);
+    color: #000000;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+}
+
+.view-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 140, 0, 0.4);
+    background: linear-gradient(135deg, #ff7c00 0%, #ff6c00 100%);
+}
+
+.btn-icon {
+    font-size: 1.2rem;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 2% auto;
+    padding: 0;
+    border: 2px solid #ff8c00;
+    border-radius: 16px;
+    width: 95%;
+    max-width: 1200px;
+    max-height: 90vh;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(255, 140, 0, 0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 1px solid #2a2a2a;
+    background-color: #0f0f0f;
+}
+
+.modal-header h2 {
+    color: #ff8c00;
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.modal-close {
+    color: #a1a1aa;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: #ff8c00;
+}
+
+.modal-body {
+    padding: 2rem;
+    overflow-y: auto;
+    max-height: calc(90vh - 120px);
+}
+
+.modal-screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.modal-screenshot-item {
+    background-color: #0f0f0f;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    text-align: center;
+}
+
+.modal-screenshot-item:hover {
+    transform: translateY(-4px);
+    border-color: #ff8c00;
+}
+
+.modal-screenshot {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.modal-screenshot-item h4 {
+    color: #ffffff;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.modal-screenshot-item p {
+    color: #a1a1aa;
+    font-size: 0.95rem;
+    line-height: 1.4;
     margin: 0;
 }
 
@@ -1614,6 +1740,7 @@ html {
     
     .framed-screenshot {
         max-width: 280px;
+        margin: 0 auto;
     }
     
     .mockups-container {
@@ -1640,5 +1767,32 @@ html {
     
     .footer-links {
         justify-content: center;
+    }
+    
+    /* Modal responsive adjustments */
+    .modal-content {
+        width: 98%;
+        margin: 1% auto;
+    }
+    
+    .modal-header {
+        padding: 1.5rem;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+    }
+    
+    .modal-screenshots-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .modal-screenshot {
+        max-width: 250px;
     }
 }

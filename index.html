@@ -40,15 +40,22 @@
                     <p>Real-time GPS tracking with comprehensive route recording and instant pace feedback</p>
                 </div>
                 <div class="screenshot-item">
-                    <img src="history-framed.png" alt="PrivStep workout history showing past runs and walks with dates, times, and distances" class="framed-screenshot">
+                    <img src="pace-consistency-framed.png" alt="PrivStep pace consistency analysis explaining how the app measures your running consistency" class="framed-screenshot">
+                    <h3>Smart Analytics</h3>
+                    <p>Advanced pace analysis and consistency scoring to help you understand your performance patterns</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="history-workouts-framed.png" alt="PrivStep workout history showing past runs and walks with dates, times, and distances" class="framed-screenshot">
                     <h3>Workout History</h3>
                     <p>Complete history of all your workouts with detailed metrics and easy navigation</p>
                 </div>
-                <div class="screenshot-item">
-                    <img src="progress-framed.png" alt="PrivStep insights screen showing week-to-week progress analysis and improvement tracking" class="framed-screenshot">
-                    <h3>Smart Analytics</h3>
-                    <p>Intelligent insights and progress tracking to help you understand your fitness patterns</p>
-                </div>
+            </div>
+            
+            <div class="view-more-section">
+                <button id="viewMoreScreenshots" class="view-more-btn">
+                    <span class="btn-icon">📱</span>
+                    View More Screenshots
+                </button>
             </div>
         </div>
     </section>
@@ -519,6 +526,50 @@
         </div>
     </section>
 
+    <!-- Screenshots Modal -->
+    <div id="screenshotsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>PrivStep Screenshots</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-screenshots-grid">
+                    <div class="modal-screenshot-item">
+                        <img src="screenshots/liverun_centralpark_2025-08-07.png" alt="Live workout tracking in Central Park" class="modal-screenshot">
+                        <h4>Live Workout Tracking</h4>
+                        <p>Real-time GPS tracking with route visualization</p>
+                    </div>
+                    <div class="modal-screenshot-item">
+                        <img src="screenshots/settings_privacy_2025-08-07.png" alt="Privacy settings showing local data only" class="modal-screenshot">
+                        <h4>Privacy Settings</h4>
+                        <p>Complete control over your data - all stored locally</p>
+                    </div>
+                    <div class="modal-screenshot-item">
+                        <img src="screenshots/dashboard_home_2025-08-07.png" alt="Home dashboard with weekly activity summary" class="modal-screenshot">
+                        <h4>Home Dashboard</h4>
+                        <p>Weekly activity summary and motivational insights</p>
+                    </div>
+                    <div class="modal-screenshot-item">
+                        <img src="screenshots/lockscreen_liveactivity_2025-08-07.png" alt="iPhone lock screen showing Live Activity workout widget" class="modal-screenshot">
+                        <h4>Lock Screen Integration</h4>
+                        <p>Live Activities show workout progress without unlocking</p>
+                    </div>
+                    <div class="modal-screenshot-item">
+                        <img src="screenshots/insights_progress_2025-08-07.png" alt="Weekly progress insights and analytics" class="modal-screenshot">
+                        <h4>Progress Insights</h4>
+                        <p>Week-to-week progress tracking and improvement analysis</p>
+                    </div>
+                    <div class="modal-screenshot-item">
+                        <img src="screenshots/workout_detail_rome_2025-08-07.png" alt="Detailed workout view with route map" class="modal-screenshot">
+                        <h4>Detailed Workout View</h4>
+                        <p>Complete workout analysis with route mapping</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -539,5 +590,46 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Screenshot Modal JavaScript -->
+    <script>
+        // Modal functionality
+        const modal = document.getElementById('screenshotsModal');
+        const viewMoreBtn = document.getElementById('viewMoreScreenshots');
+        const closeBtn = document.getElementsByClassName('modal-close')[0];
+        
+        // Open modal when button is clicked
+        viewMoreBtn.addEventListener('click', function() {
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+        
+        // Close modal when X is clicked
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+        
+        // Close modal when clicking outside of modal content
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && modal.style.display === 'block') {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        });
+        
+        // Handle modal scroll on mobile
+        modal.addEventListener('touchmove', function(event) {
+            event.stopPropagation();
+        });
+    </script>
 </body>
 </html>
