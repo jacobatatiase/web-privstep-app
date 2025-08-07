@@ -1804,3 +1804,94 @@ html {
         max-width: 250px;
     }
 }
+
+/* Trust Verification Section */
+.trust-verification {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+}
+
+.trust-intro {
+    font-size: 1.125rem;
+    color: #a1a1aa;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.plot-twist {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #ff8c00;
+    margin: 3rem 0;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(255, 140, 0, 0.2);
+}
+
+.plot-twist h3 {
+    color: #ff8c00;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.verification-methods {
+    margin: 3rem 0;
+}
+
+.verification-methods > h3 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+}
+
+.verification-item {
+    background-color: #1a1a1a;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.1);
+}
+
+.verification-item h4 {
+    color: #ff8c00;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.paranoia-check {
+    background-color: #0f0f0f;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #ff8c00;
+    margin-top: 1.5rem;
+}
+
+.paranoia-check p {
+    margin-bottom: 0.5rem;
+}
+
+.paranoia-check p:last-child {
+    margin-bottom: 0;
+    color: #ff8c00;
+}
+
+.trust-conclusion {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.1);
+}
+
+.trust-conclusion h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.trust-conclusion p {
+    font-size: 1.125rem;
+    color: #e5e5e5;
+    margin-bottom: 0;
+}
