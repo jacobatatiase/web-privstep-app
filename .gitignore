@@ -2,10 +2,6 @@
 CLAUDE.md
 docs/
 
-# Private scripts
-create_better_screenshots.py
-*screenshots*.py
-
 # Dependencies
 node_modules/
 npm-debug.log*
