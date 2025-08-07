@@ -233,7 +233,7 @@ html {
 
 .screenshots-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 3rem;
     max-width: 1400px;
     margin: 0 auto;
@@ -256,9 +256,9 @@ html {
 
 .framed-screenshot {
     width: 100%;
-    max-width: 100%;
+    max-width: 400px;
     height: auto;
-    margin-bottom: 1.5rem;
+    margin: 0 auto 1.5rem auto;
     border-radius: 12px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
