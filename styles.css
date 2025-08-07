@@ -256,11 +256,11 @@ html {
 
 .framed-screenshot {
     width: 100%;
-    max-width: 220px;
+    max-width: 320px;
     height: auto;
     margin-bottom: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .screenshot-item h3 {
@@ -1606,7 +1606,7 @@ html {
     }
     
     .framed-screenshot {
-        max-width: 200px;
+        max-width: 280px;
     }
     
     .mockups-container {
