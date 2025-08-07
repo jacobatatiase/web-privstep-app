@@ -233,9 +233,9 @@ html {
 
 .screenshots-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 3rem;
-    max-width: 1400px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -256,7 +256,7 @@ html {
 
 .framed-screenshot {
     width: 100%;
-    max-width: 400px;
+    max-width: 320px;
     height: auto;
     margin: 0 auto 1.5rem auto;
     border-radius: 12px;
@@ -1732,6 +1732,7 @@ html {
     .screenshots-container {
         grid-template-columns: 1fr;
         gap: 2rem;
+        max-width: 400px;
     }
     
     .screenshot-item {
