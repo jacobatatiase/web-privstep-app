@@ -66,22 +66,27 @@ html {
     background-color: #ff8c00;
     color: #000000;
     font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:hover {
     background-color: #ff7c00;
-    transform: translateY(-1px);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary {
     background-color: transparent;
     color: #ff8c00;
     border: 2px solid #ff8c00;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .btn-secondary:hover {
     background-color: #ff8c00;
     color: #000000;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Hero Section */
@@ -1108,11 +1113,13 @@ html {
 .testflight-btn {
     display: inline-block;
     text-decoration: none;
-    transition: transform 0.2s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.2);
 }
 
 .testflight-btn:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 122, 255, 0.4), 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .testflight-badge {
