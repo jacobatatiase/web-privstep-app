@@ -1992,3 +1992,145 @@ html {
         padding: 1.5rem;
     }
 }
+
+/* FAQ Infobox */
+.faq-infobox {
+    background: linear-gradient(135deg, #2a1810 0%, #1a1a1a 100%);
+    border: 3px solid #ff8c00;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 3rem 0;
+    box-shadow: 0 8px 32px rgba(255, 140, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-infobox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff8c00 0%, #ffa500 50%, #ff8c00 100%);
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.faq-header h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.faq-counter {
+    background-color: #ff8c00;
+    color: #000000;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.big-yes {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #00ff88;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+    margin: 1rem 0;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.reassurance {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #ff8c00;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.data-migration-explanation {
+    background-color: rgba(255, 140, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 140, 0, 0.3);
+}
+
+.data-migration-explanation p {
+    color: #e5e5e5;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.encouragement {
+    background-color: rgba(0, 255, 136, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.encouragement p {
+    color: #00ff88;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.encouragement p:last-child {
+    margin-bottom: 0;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.promise-seal {
+    background-color: rgba(255, 140, 0, 0.15);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #ff8c00;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.promise-seal p {
+    color: #ffffff;
+    font-size: 1.05rem;
+    margin-bottom: 0;
+}
+
+/* Mobile responsiveness for FAQ */
+@media (max-width: 768px) {
+    .faq-infobox {
+        padding: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .big-yes {
+        font-size: 3rem;
+    }
+    
+    .faq-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .reassurance {
+        font-size: 1.1rem;
+    }
+}
