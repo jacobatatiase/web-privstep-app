@@ -263,6 +263,13 @@ html {
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
+/* Ensure desktop gets larger screenshots */
+@media (min-width: 768px) {
+    .framed-screenshot {
+        max-width: 480px;
+    }
+}
+
 .screenshot-item h3 {
     color: #ffffff;
     font-size: 1.25rem;
@@ -1579,7 +1586,7 @@ html {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .container {
         padding: 0 1rem;
     }
