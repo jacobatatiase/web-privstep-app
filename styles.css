@@ -1810,6 +1810,10 @@ html {
     background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
 }
 
+.trust-verification h2 {
+    text-align: center;
+}
+
 .trust-intro {
     font-size: 1.125rem;
     color: #a1a1aa;
@@ -1894,4 +1898,97 @@ html {
     font-size: 1.125rem;
     color: #e5e5e5;
     margin-bottom: 0;
+}
+
+/* TestFlight Privacy Disclosure */
+.testflight-privacy-disclosure {
+    background-color: #1a1a1a;
+    border: 2px solid #ff8c00;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 16px rgba(255, 140, 0, 0.2);
+}
+
+.testflight-privacy-disclosure h3 {
+    color: #ff8c00;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.disclosure-intro {
+    text-align: center;
+    color: #a1a1aa;
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+}
+
+.testflight-data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.data-category {
+    background-color: #0f0f0f;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+}
+
+.data-category h4 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.data-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.data-category li {
+    color: #a1a1aa;
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.data-category li:before {
+    content: "•";
+    color: #ff8c00;
+    position: absolute;
+    left: 0;
+}
+
+.data-category li strong {
+    color: #e5e5e5;
+}
+
+.disclosure-footer {
+    background-color: #0f0f0f;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #2a2a2a;
+    margin-top: 2rem;
+}
+
+.disclosure-footer p {
+    color: #e5e5e5;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
+/* Mobile responsiveness for TestFlight disclosure */
+@media (max-width: 768px) {
+    .testflight-data-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .testflight-privacy-disclosure {
+        padding: 1.5rem;
+    }
 }
