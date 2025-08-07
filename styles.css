@@ -1981,6 +1981,27 @@ html {
     font-size: 1.1rem;
 }
 
+.app-store-alternative {
+    background-color: rgba(0, 255, 136, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    margin-top: 1.5rem;
+}
+
+.app-store-alternative p:first-child {
+    color: #00ff88;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.app-store-alternative p:last-child {
+    color: #e5e5e5;
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
 /* Mobile responsiveness for TestFlight disclosure */
 @media (max-width: 768px) {
     .testflight-data-grid {
