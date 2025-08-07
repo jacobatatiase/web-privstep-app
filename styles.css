@@ -62,6 +62,136 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    .floating-nav,
+    .nav-link {
+        transition: none !important;
+    }
+}
+
+/* Floating Navigation */
+.floating-nav {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.floating-nav.visible {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.nav-container {
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(42, 42, 42, 0.8);
+    border-radius: 50px;
+    padding: 0.75rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #a1a1aa;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    background-color: rgba(42, 42, 42, 0.5);
+}
+
+.nav-link.active {
+    color: #000000;
+    background-color: #ff8c00;
+    box-shadow: 0 2px 8px rgba(255, 140, 0, 0.3);
+}
+
+.nav-link.active:hover {
+    background-color: #ff7c00;
+}
+
+.nav-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .floating-nav {
+        top: 1rem;
+        left: 1rem;
+        right: 1rem;
+        transform: translateY(-100%);
+    }
+    
+    .floating-nav.visible {
+        transform: translateY(0);
+    }
+    
+    .nav-container {
+        padding: 0.5rem 0.75rem;
+        border-radius: 25px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
+    .nav-container::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .nav-link {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.8rem;
+        border-radius: 20px;
+        min-width: fit-content;
+    }
+    
+    .nav-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Ultra-small screens */
+@media (max-width: 480px) {
+    .nav-container {
+        gap: 0.25rem;
+    }
+    
+    .nav-link {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.75rem;
+    }
+    
+    .nav-text {
+        font-size: 0.75rem;
+    }
+}
+
 .btn-primary {
     background-color: #ff8c00;
     color: #000000;

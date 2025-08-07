@@ -13,8 +13,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Floating Navigation -->
+    <nav id="floatingNav" class="floating-nav" aria-label="Page navigation">
+        <div class="nav-container">
+            <a href="#hero" class="nav-link active" data-section="hero">
+                <span class="nav-text">Home</span>
+            </a>
+            <a href="#why-privstep" class="nav-link" data-section="why-privstep">
+                <span class="nav-text">Why PrivStep</span>
+            </a>
+            <a href="#features" class="nav-link" data-section="features">
+                <span class="nav-text">Features</span>
+            </a>
+            <a href="#privacy-risks" class="nav-link" data-section="privacy-risks">
+                <span class="nav-text">Privacy Risks</span>
+            </a>
+            <a href="#alternatives" class="nav-link" data-section="alternatives">
+                <span class="nav-text">Alternatives</span>
+            </a>
+            <a href="#download" class="nav-link" data-section="download">
+                <span class="nav-text">Get PrivStep</span>
+            </a>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="hero" class="hero">
         <div class="container">
             <div class="hero-icon">
                 <img src="icons/AppIcon.appiconset/ItunesArtwork@2x.png" alt="PrivStep App Icon" class="app-icon">
@@ -61,7 +85,7 @@
     </section>
 
     <!-- Value Proposition Section -->
-    <section class="value-prop">
+    <section id="why-privstep" class="value-prop">
         <div class="container">
             <h2>Why Choose PrivStep?</h2>
             <div class="value-grid">
@@ -86,7 +110,7 @@
     </section>
 
     <!-- Features Section -->
-    <section class="features">
+    <section id="features" class="features">
         <div class="container">
             <h2>Powerful Features, Complete Privacy</h2>
             <div class="features-grid">
@@ -119,7 +143,7 @@
     </section>
 
     <!-- Risk Education Section -->
-    <section class="risk-education">
+    <section id="privacy-risks" class="risk-education">
         <div class="container">
             <h2>Why Most Fitness Apps Put You at Risk</h2>
             <div class="risk-grid">
@@ -304,7 +328,7 @@
     </section>
 
     <!-- Competitor Comparison Section -->
-    <section class="competitor-comparison">
+    <section id="alternatives" class="competitor-comparison">
         <div class="container">
             <h2>Even Among Privacy-Focused Apps, PrivStep Is Different</h2>
             <p class="comparison-intro">Privacy-focused fitness tracking is a mature space with several excellent options. Here's how PrivStep compares to the established leaders:</p>
@@ -698,6 +722,124 @@
         </div>
     </footer>
     
+    <!-- Floating Navigation JavaScript -->
+    <script>
+        // Floating Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.getElementById('floatingNav');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section[id]');
+            
+            let isScrolling = false;
+            let currentActiveSection = 'hero';
+            
+            // Throttle scroll events for better performance
+            function throttle(func, limit) {
+                let inThrottle;
+                return function() {
+                    const args = arguments;
+                    const context = this;
+                    if (!inThrottle) {
+                        func.apply(context, args);
+                        inThrottle = true;
+                        setTimeout(() => inThrottle = false, limit);
+                    }
+                }
+            }
+            
+            // Show/hide navigation based on scroll position
+            function handleNavVisibility() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const heroSection = document.getElementById('hero');
+                const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+                
+                if (scrollTop > heroBottom * 0.3) {
+                    nav.classList.add('visible');
+                } else {
+                    nav.classList.remove('visible');
+                }
+            }
+            
+            // Update active navigation link based on current section
+            function updateActiveNavLink() {
+                if (isScrolling) return;
+                
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const windowHeight = window.innerHeight;
+                let activeSection = 'hero';
+                
+                // Find the section currently in view
+                for (let i = sections.length - 1; i >= 0; i--) {
+                    const section = sections[i];
+                    const sectionTop = section.offsetTop;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+                    
+                    // Section is considered active if it's prominently in view
+                    if (scrollTop >= sectionTop - windowHeight * 0.3 && scrollTop < sectionBottom - windowHeight * 0.3) {
+                        activeSection = section.id;
+                        break;
+                    }
+                }
+                
+                // Only update if active section changed
+                if (activeSection !== currentActiveSection) {
+                    currentActiveSection = activeSection;
+                    
+                    // Update nav links
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.dataset.section === activeSection) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            }
+            
+            // Handle navigation link clicks
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        isScrolling = true;
+                        
+                        // Update active state immediately for better UX
+                        navLinks.forEach(navLink => navLink.classList.remove('active'));
+                        this.classList.add('active');
+                        currentActiveSection = targetId;
+                        
+                        // Smooth scroll to target
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Reset scrolling flag after animation
+                        setTimeout(() => {
+                            isScrolling = false;
+                        }, 1000);
+                    }
+                });
+            });
+            
+            // Combine scroll handlers with throttling
+            const handleScroll = throttle(function() {
+                handleNavVisibility();
+                updateActiveNavLink();
+            }, 16); // ~60fps
+            
+            // Listen for scroll events
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            
+            // Initial setup
+            handleNavVisibility();
+            updateActiveNavLink();
+        });
+    </script>
+
     <!-- Screenshot Modal JavaScript -->
     <script>
         // Modal functionality
