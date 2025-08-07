@@ -256,7 +256,7 @@ html {
 
 .framed-screenshot {
     width: 100%;
-    max-width: 320px;
+    max-width: 480px;
     height: auto;
     margin-bottom: 1.5rem;
     border-radius: 12px;
