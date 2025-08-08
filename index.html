@@ -760,8 +760,10 @@
                 <div class="footer-links">
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms of Service</a>
-                    <a href="#">Support</a>
-                    <a href="#">Contact</a>
+                    <a href="#" id="contactLink" class="contact-link">
+                        <span class="contact-icon">📧</span>
+                        <span class="contact-text">Get in Touch</span>
+                    </a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -999,6 +1001,33 @@
         // Handle modal scroll on mobile
         modal.addEventListener('touchmove', function(event) {
             event.stopPropagation();
+        });
+    </script>
+
+    <!-- Email Obfuscation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactLink = document.getElementById('contactLink');
+            
+            if (contactLink) {
+                contactLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Email components stored separately to avoid harvesting
+                    const user = 'info';
+                    const domain = 'privstep.app';
+                    const subject = encodeURIComponent('PrivStep Inquiry');
+                    
+                    // Construct the mailto URL
+                    const mailtoUrl = `mailto:${user}@${domain}?subject=${subject}`;
+                    
+                    // Open email client
+                    window.location.href = mailtoUrl;
+                });
+                
+                // Add hover effect for better UX
+                contactLink.style.cursor = 'pointer';
+            }
         });
     </script>
 </body>
