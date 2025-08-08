@@ -2005,9 +2005,10 @@ html {
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s ease;
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 0.5rem;
     border-radius: 8px;
     border: 1px solid transparent;
+    margin: -0.25rem 0;
 }
 
 .contact-link:hover {
